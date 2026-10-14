@@ -1,0 +1,89 @@
+import java.util.Scanner;
+public class MovieRecommender
+{
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		String answerYes = "yes";
+		String answerNo = "no";
+		
+		String answerSuper = "superhero";
+		String answerSpy = "spy";
+		String answerOther = "other";
+		
+		System.out.println("Welcome to the movie Recommender!");
+		
+		System.out.println("Do you like action movies? (yes/no):");
+		String answer1 = scan.nextLine();
+		
+		if(answer1.equalsIgnoreCase(answerYes)) {
+			
+		System.out.println("Do you prefer superhero or spy movies? (superhero/spy/other):");
+		String answer2 = scan.nextLine();
+		
+			
+			if(answer2.equalsIgnoreCase(answerSpy)){
+				System.out.println("You should watch 'Mission: Impossible Fallout'.");
+			}
+			
+		
+			 else if(answer2.equalsIgnoreCase(answerSuper)){
+				System.out.println("You should watch 'Avengers: Endgame'.");
+			}
+		
+			else if(answer2.equalsIgnoreCase(answerOther)){
+				System.out.println("You should watch 'Mad Max: Fury Road'.");
+			}
+			
+		}
+			
+			else{
+			System.out.println("Do you like comedies? (yes/no):");
+			String answer3 = scan.nextLine();
+			
+			if(answer3.equalsIgnoreCase(answerYes)) {
+				System.out.println("Do you prefer smart or silly humor? (smart/silly/other):");
+				String answer4 = scan.nextLine();
+				
+				if(answer4.equalsIgnoreCase("smart")) {
+					System.out.println("You should watch 'The Grand Budapest Hotel'.");
+				}
+				else if(answer4.equalsIgnoreCase("silly")) {
+					System.out.println("You should watch 'The Hangover'.");
+				}
+				
+				else {
+                    System.out.println("You should watch 'The Mask'.");
+                }
+
+            } else {
+
+                System.out.println("Do you like independent films? (yes/no):");
+                String answer5 = scan.nextLine();
+
+                if (answer5.equalsIgnoreCase(answerYes)) {
+
+                    System.out.println("Do you prefer drama or experimental films? (drama/experimental/other):");
+                    String answer6 = scan.nextLine();
+
+
+                    if (answer6.equalsIgnoreCase("drama")) {
+                        System.out.println("You should watch 'Lady Bird'.");
+                    } else if (answer6.equalsIgnoreCase("experimental")) {
+                        System.out.println("You should watch 'Everything Is Illuminated'.");
+                    } else {
+                        System.out.println("You should watch 'Moonlight'.");
+                    }
+
+                } else {
+                    System.out.println("You should watch 'Home Alone'.");
+                }
+            }
+        }
+
+        System.out.println("Thanks for using the Movie Recommender!");
+
+        scan.close();
+    }
+}
